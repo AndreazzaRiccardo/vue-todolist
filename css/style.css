@@ -3,3 +3,56 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+img {
+    filter: invert(100%);
+    width: 200px;
+}
+
+body {
+    background-color: rgb(213, 232, 238);
+}
+
+.container {
+    width: 80%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem
+}
+
+.input {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+input {
+    padding: .2rem 1rem;
+}
+
+li {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .2rem 1rem;
+    width: 400px;
+    list-style-type: none;
+    border-bottom: 1px solid black;
+}
+
+label {
+    font-size: 1.5rem;
+}
+
+.to-do {
+    text-decoration:line-through;
+}
+
+.delete {
+    color: darkred;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
