@@ -22,6 +22,14 @@ body {
     gap: 2rem
 }
 
+.title {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    font-size: .9rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
 .input {
     display: flex;
     gap: 1rem;
@@ -30,6 +38,7 @@ body {
 
 input {
     padding: .2rem 1rem;
+    border-color: black;
 }
 
 li {
@@ -49,7 +58,7 @@ label {
 }
 
 .done {
-    text-decoration:line-through;
+    text-decoration:line-through darkred;
 }
 
 .delete {
@@ -63,10 +72,14 @@ label {
 
 .done-list h2 {
     text-align: center;
-    color: blue;
 }
 
 hr {
     width: 100%;
-    height: 5px;
+    height: 3px;
+}
+
+button {
+    padding: .2rem 1rem;
+    border-color: black;
 }
