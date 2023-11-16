@@ -19,7 +19,7 @@
             <div class="list">
                 <ul v-for="(item, i) in toDoList" :key="i">
                     <li>
-                        <span @click="checked(i)" :class="{'to-do' : item.done}">{{ i + 1 }} : {{ item.text }}</span>
+                        <span class="item-list" @click="checked(i)" :class="{'done' : item.done}">{{ i + 1 }} : {{ item.text }}</span>
                         <span class="delete" @click="deleteThis(i)">&Cross;</span>
                     </li>
                 </ul>

@@ -47,7 +47,7 @@ label {
     font-size: 1.5rem;
 }
 
-.to-do {
+.done {
     text-decoration:line-through;
 }
 
@@ -55,4 +55,8 @@ label {
     color: darkred;
     cursor: pointer;
     font-size: 1.5rem;
+}
+
+.item-list {
+    cursor:cell;
 }
