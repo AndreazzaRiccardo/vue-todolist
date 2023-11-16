@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do list</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
@@ -19,8 +20,18 @@
             <div class="list">
                 <ul v-for="(item, i) in toDoList" :key="i">
                     <li>
-                        <span class="item-list" @click="checked(i)" :class="{'done' : item.done}">{{ i + 1 }} : {{ item.text }}</span>
-                        <span class="delete" @click="deleteThis(i)">&Cross;</span>
+                        <span class="item-list" @click="checkedDone(i)" :class="{'done' : item.done}">{{ i + 1 }} : {{ item.text }}</span>
+                        <span class="delete" @click="deleteThis(toDoList, i)"><i class="fa-solid fa-trash"></i></span>
+                    </li>
+                </ul>
+            </div>
+            <hr>
+            <div class="done-list">
+                <h2>DONE</h2>
+                <ul v-for="(item, i) in doneList" :key="i">
+                    <li>
+                        <span class="item-list" @click="notDone(i)" :class="{'done' : item.done}">{{ i + 1 }} : {{ item.text }}</span>
+                        <span class="delete" @click="deleteThis(doneList, i)"><i class="fa-solid fa-trash"></i></span>
                     </li>
                 </ul>
             </div>
