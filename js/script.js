@@ -13,7 +13,7 @@ createApp({
     methods: {
 
         addFromStorage: function() {
-            if(localStorage.key(0) !== null){
+            if(localStorage.getItem("List") !== null){
             this.toDoList = JSON.parse(localStorage.getItem("List"));
             }
         },
