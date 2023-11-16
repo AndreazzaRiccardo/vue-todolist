@@ -67,11 +67,13 @@ label {
 }
 
 .item-list {
-    cursor:cell;
+    cursor:grab;
+    width: 100%;
 }
 
 .done-list h2 {
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 hr {
@@ -82,4 +84,17 @@ hr {
 button {
     padding: .2rem 1rem;
     border-color: black;
+}
+
+.red {
+    color: darkred;
+    margin-top: -30px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.danger {
+    border: 2px solid darkred;
 }

@@ -14,34 +14,47 @@
 <body>
 
     <div id="app">
+
         <div class="container">
+
             <div class="title">
                 <img src="./img/boolean-logo.png" alt="">
                 <h1>TO DO LIST</h1>
             </div>
             <div class="input">
                 <label for="list">Insert in ToDoList:</label>
-                <input placeholder="Write here" type="text" id="list" v-model="toDo" @keyup.enter="addToList">
+                <input :placeholder="placeHolder" type="text" id="list" v-model.trim="toDo" @keyup.enter="addToList" @click="resetPlaceHolder" :class="{'danger' : inputFlag}">
                 <button @click="addToList">Add</button>
             </div>
+            <p class="red bold" v-show="inputFlag">Please enter a valid input</p>
+            
             <div class="list">
-                <ul v-for="(item, i) in toDoList" :key="i">
-                    <li>
-                        <span class="item-list" @click="checkedDone(i)" :class="{'done' : item.done}">{{ i + 1 }} : {{ item.text }}</span>
-                        <span class="delete" @click="deleteThis(toDoList, i)"><i class="fa-solid fa-trash"></i></span>
+                <ul v-if="toDoList.length > 0">
+                    <li v-for="(item, i) in toDoList" :key="i" @click="checkedDone(i)">
+                        <span class="item-list" :class="{'done' : item.done}">{{ i + 1 }} : {{ item.text }}</span>
+                        <span class="delete" @click.stop="deleteThis(toDoList, i)"><i class="fa-solid fa-trash"></i></span>
                     </li>
                 </ul>
+                <div v-else>
+                    <p class="bold">To Do List is empty</p>
+                </div>
             </div>
+
             <hr>
+
             <div class="done-list">
                 <h2>DONE</h2>
-                <ul v-for="(item, i) in doneList" :key="i">
-                    <li>
-                        <span class="item-list" @click="notDone(i)" :class="{'done' : item.done}">{{ i + 1 }} : {{ item.text }}</span>
-                        <span class="delete" @click="deleteThis(doneList, i)"><i class="fa-solid fa-trash"></i></span>
+                <ul v-if="doneList.length > 0">
+                    <li v-for="(item, i) in doneList" :key="i" @click="notDone(i)">
+                        <span class="item-list" :class="{'done' : item.done}">{{ i + 1 }} : {{ item.text }}</span>
+                        <span class="delete" @click.stop="deleteThis(doneList, i)"><i class="fa-solid fa-trash"></i></span>
                     </li>
                 </ul>
+                <div v-else>
+                    <p class="bold">Done List is empty</p>
+                </div>
             </div>
+
         </div>
         
     </div>
