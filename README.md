@@ -1,17 +1,19 @@
-### ESERCIZIO
-Implementare una todolist base. Ogni todo è rappresentato come una stringa all'interno dell'array.
-MILESTONE 1
-Stampare all'interno di una lista, un item per ogni todo.
-MILESTONE 2
-Visualizzare a fianco ad ogni item ha una "x": cliccando su di essa, il todo viene rimosso dalla lista.
-MILESTONE 3
-Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul pulsante, il testo digitato viene letto e utilizzato per creare un nuovo todo, che quindi viene aggiunto alla lista dei todo esistenti.
-BONUS 1
-Oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista
-BONUS 2
-Trasformare ogni todo in un oggetto, formato da due proprietà:
-- text, una stringa che indica il testo del todo
-- done, un booleano (true/false) che indica se il todo è stato fatto oppure no. Se done è true, mostrare il testo del todo sbarrato.
-Di conseguenza modificare la funzionalità di input in modo da aggiungere un nuovo oggetto alla lista invece della semplice stringa.
-BONUS 3
-Cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
+### EXERCISE
+Implement a basic todolist. Each todo is represented as a string within the array.
+- MILESTONE 1
+Print within a list, an item for each todo.
+- MILESTONE 2
+Display next to each item has an "x": clicking on it, the todo is removed from the list.
+- MILESTONE 3
+Prepare a text input field and an "add" button: by clicking on the button, the typed text is read and used to create a new todo, which is then added to the list of existing todos.
+- BONUS 1
+In addition to clicking on the button, also intercept the ENTER key to add todo to the list
+- BONUS 2
+Transform each todo into an object, formed by two properties:
+  text, a string indicating todo text
+  done, a boolean (true/false) indicating whether the todo has been done or not. If done is true, show the crossed-out todo text.
+As a result, change the input feature to add a new object to the list instead of the simple string.
+- BONUS 3
+By clicking on the item text, reverse the value of the corresponding todo’s done property (if done was equal to false, set true if not false)
+
+![Screenshot 2024-02-08 184420](https://github.com/AndreazzaRiccardo/vue-todolist/assets/136316597/538aa980-d870-4058-93dd-edcbe3789f1a)
